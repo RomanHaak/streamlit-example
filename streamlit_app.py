@@ -138,12 +138,12 @@ cn_codes = [
 
 dropdown_cn_codes = st.selectbox(
     'Geben Sie den KN-Code Ihrer Ware an',
-    cn_codes, placeholder='KN-Code')
+    cn_codes, index=None, placeholder='KN-Code')
 
 
 dropdown_countries = st.selectbox(
     'Geben Sie das Herkunftsland Ihrer Ware an',
-    countries, placeholder='Herkunftsland')
+    countries, index=None, placeholder='Herkunftsland')
 
 activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Hier eine positive Zahl eingeben')
 
