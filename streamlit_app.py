@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.title('CBAM-Kostenschätzer')
+st.title('CBAM-Kostenschätzerli')
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
