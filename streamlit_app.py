@@ -6,6 +6,29 @@ import streamlit as st
 st.title('CBAM-Kostenschätzer')
 
 
+
+
+
+dropdown_cn_codes = st.selectbox(
+    'Geben Sie den KN-Code Ihrer Ware an',
+    cn_codes, index=None, placeholder='KN-Code')
+
+
+dropdown_countries = st.selectbox(
+    'Geben Sie das Herkunftsland Ihrer Ware an',
+    countries, index=None, placeholder='Herkunftsland')
+
+activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Hier eine positive Zahl eingeben')
+
+
+def calculate():
+    ans=activity_data*100
+    st.success(f"Geschätzte Kosten = {ans}")
+
+if st.button("Kosten berechnen"):
+    calculate()
+
+
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
     'AG - Antigua und Barbuda', 'AI - Anguilla', 'AL - Albanien', 
@@ -134,55 +157,3 @@ cn_codes = [
     "3102", "3102 10", "3102 21 00", "3102 29 00", "3102 30", "3102 40", "3102 50 00", "3102 60 00", 
     "3102 80 00", "3105", "3105 20", "3105 30 00", "3105 40 00", "3105 51 00", "3105 59 00"
 ]
-
-
-dropdown_cn_codes = st.selectbox(
-    'Geben Sie den KN-Code Ihrer Ware an',
-    cn_codes, index=None, placeholder='KN-Code')
-
-
-dropdown_countries = st.selectbox(
-    'Geben Sie das Herkunftsland Ihrer Ware an',
-    countries, index=None, placeholder='Herkunftsland')
-
-activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Hier eine positive Zahl eingeben')
-
-
-def calculate():
-    ans=activity_data*100
-    st.success(f"Geschätzte Kosten = {ans}")
-
-if st.button("Kosten berechnen"):
-    calculate()
-
-
-DATE_COLUMN = 'date/time'
-DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
-            'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
-
-@st.cache_data
-def load_data(nrows):
-    data = pd.read_csv(DATA_URL, nrows=nrows)
-    lowercase = lambda x: str(x).lower()
-    data.rename(lowercase, axis='columns', inplace=True)
-    data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
-    return data
-
-data_load_state = st.text('Loading data...')
-data = load_data(10000)
-data_load_state.text("Done! (using st.cache_data)")
-
-if st.checkbox('Show raw data'):
-    st.subheader('Raw data')
-    st.write(data)
-
-st.subheader('Number of pickups by hour')
-hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
-st.bar_chart(hist_values)
-
-# Some number in the range 0-23
-hour_to_filter = st.slider('hour', 0, 23, 17)
-filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
-
-st.subheader('Map of all pickups at %s:00' % hour_to_filter)
-st.map(filtered_data)
