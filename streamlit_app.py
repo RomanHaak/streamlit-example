@@ -145,7 +145,7 @@ dropdown_countries = st.selectbox(
     'Geben Sie das Herkunftsland Ihrer Ware an',
     countries)
 
-st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None)
+activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None)
 
 
 DATE_COLUMN = 'date/time'
