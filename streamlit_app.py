@@ -13,7 +13,11 @@ If you have any questions, checkout our [documentation](https://docs.streamlit.i
 forums](https://discuss.streamlit.io).
 """
 
+option = st.selectbox(
+    'How would you like to be contacted?',
+    ('Email', 'Home phone', 'Mobile phone'))
 
+st.write('You selected:', option)
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
