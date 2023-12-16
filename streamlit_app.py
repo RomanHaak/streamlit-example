@@ -146,11 +146,12 @@ dropdown_countries = st.selectbox(
 
 activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Warenmenge in Tonnen')
 
+st.write('Geschätzte Kosten:')
 
 def calculate():
     if isinstance(activity_data,int):
         ans=activity_data*100
-        st.success(f"Geschätzte Kosten = {ans}")
+        st.success(f"{ans}")
    
     
 calculate()
