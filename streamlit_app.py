@@ -6,26 +6,6 @@ import streamlit as st
 st.title('CBAM-Kostenschätzer')
 
 
-dropdown_cn_codes = st.selectbox(
-    'Geben Sie den KN-Code Ihrer Ware an',
-    cn_codes, index=None, placeholder='KN-Code')
-
-
-dropdown_countries = st.selectbox(
-    'Geben Sie das Herkunftsland Ihrer Ware an',
-    countries, index=None, placeholder='Herkunftsland')
-
-activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Hier eine positive Zahl eingeben')
-
-
-def calculate():
-    ans=activity_data*100
-    st.success(f"Geschätzte Kosten = {ans}")
-
-if st.button("Kosten berechnen"):
-    calculate()
-
-
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
     'AG - Antigua und Barbuda', 'AI - Anguilla', 'AL - Albanien', 
@@ -154,3 +134,24 @@ cn_codes = [
     "3102", "3102 10", "3102 21 00", "3102 29 00", "3102 30", "3102 40", "3102 50 00", "3102 60 00", 
     "3102 80 00", "3105", "3105 20", "3105 30 00", "3105 40 00", "3105 51 00", "3105 59 00"
 ]
+
+
+dropdown_cn_codes = st.selectbox(
+    'Geben Sie den KN-Code Ihrer Ware an',
+    cn_codes, index=None, placeholder='KN-Code')
+
+
+dropdown_countries = st.selectbox(
+    'Geben Sie das Herkunftsland Ihrer Ware an',
+    countries, index=None, placeholder='Herkunftsland')
+
+activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Hier eine positive Zahl eingeben')
+
+
+def calculate():
+    ans=activity_data*100
+    st.success(f"Geschätzte Kosten = {ans}")
+
+if st.button("Kosten berechnen"):
+    calculate()
+
