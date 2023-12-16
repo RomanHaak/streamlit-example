@@ -151,11 +151,10 @@ def calculate():
     if isinstance(activity_data,int):
         ans=activity_data*100
         st.success(f"Geschätzte Kosten = {ans}")
-    else st.warning('Bitte geben Sie die Warenmenge (in Tonnen) an')
+   
     
 
-
-    calculate()
+ calculate()
  
 
 
