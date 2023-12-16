@@ -153,10 +153,5 @@ def calculate():
         st.success(f"Geschätzte Kosten = {ans}")
    
     
-
- calculate()
+calculate()
  
-
-
-
-
