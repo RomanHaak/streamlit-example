@@ -15,7 +15,7 @@ forums](https://discuss.streamlit.io).
 
 dropdown_countries = st.selectbox(
     'Geben Sie das Herkunftsland Ihrer Ware an',
-    ('Email', 'Home phone', 'Mobile phone'))
+    ('Email', 'Home phone', 'Mobile phone', 'Fax'))
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
