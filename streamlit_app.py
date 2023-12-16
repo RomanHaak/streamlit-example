@@ -6,9 +6,6 @@ import streamlit as st
 st.title('CBAM-Kostenschätzer')
 
 
-
-
-
 dropdown_cn_codes = st.selectbox(
     'Geben Sie den KN-Code Ihrer Ware an',
     cn_codes, index=None, placeholder='KN-Code')
