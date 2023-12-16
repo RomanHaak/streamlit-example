@@ -151,8 +151,9 @@ def calculate():
     ans=activity_data*100
     st.success(f"Geschätzte Kosten = {ans}")
 
-if st.button("Kosten berechnen"):
+if isinstance(activity_data,int):
     calculate()
+else st.warning('Bitte geben Sie die Warenmenge (in Tonnen) an')
 
 
 
