@@ -147,10 +147,4 @@ dropdown_countries = st.selectbox(
 activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Hier eine positive Zahl eingeben')
 
 
-def calculate():
-    ans=activity_data*100
-    st.success(f"Geschätzte Kosten = {ans}")
-
-if st.button("Kosten berechnen"):
-    calculate()
 
