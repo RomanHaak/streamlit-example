@@ -148,12 +148,15 @@ activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in T
 
 
 def calculate():
-    ans=activity_data*100
-    st.success(f"Geschätzte Kosten = {ans}")
+    if isinstance(activity_data,int):
+        ans=activity_data*100
+        st.success(f"Geschätzte Kosten = {ans}")
+    else st.warning('Bitte geben Sie die Warenmenge (in Tonnen) an')
+    
 
-if isinstance(activity_data,int):
+
     calculate()
-else st.warning('Bitte geben Sie die Warenmenge (in Tonnen) an')
+ 
 
 
 
