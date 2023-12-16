@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-st.title('CBAM-Kostenschätzerli')
+st.title('CBAM-Kostenschätzer')
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
@@ -147,4 +147,9 @@ dropdown_countries = st.selectbox(
 activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Warenmenge in Tonnen')
 
 
+def calculate():
+    ans=activity_data*100
+    st.success(f"Geschätzte Kosten = {ans}")
 
+if st.button("Kosten berechnen"):
+    calculate()
