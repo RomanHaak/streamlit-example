@@ -144,7 +144,7 @@ dropdown_countries = st.selectbox(
     'Geben Sie das Herkunftsland Ihrer Ware an',
     countries, index=None, placeholder='Herkunftsland')
 
-activity_data = st.number_input('Geben Sie die Wenge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Warenmenge in Tonnen')
+activity_data = st.number_input('Geben Sie die Menge der importierten Ware (in Tonnen) an', min_value=0, max_value=None, value=None, placeholder='Warenmenge in Tonnen')
 
 st.write('Geschätzte Kosten:')
 
