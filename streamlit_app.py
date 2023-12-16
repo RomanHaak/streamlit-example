@@ -13,9 +13,7 @@ If you have any questions, checkout our [documentation](https://docs.streamlit.i
 forums](https://discuss.streamlit.io).
 """
 
-countries = ["A", "B", "C"]
-
-dropdown_countries = st.selectbox("Geben Sie das Herkunftsland Ihrer Ware an", contries)
+dropdown_countries = st.selectbox("Geben Sie das Herkunftsland Ihrer Ware an", ["A", "B", "C"])
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
