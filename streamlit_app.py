@@ -5,7 +5,6 @@ import streamlit as st
 
 st.title('CBAM-Kostenschätzerli')
 
-
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
     'AG - Antigua und Barbuda', 'AI - Anguilla', 'AL - Albanien', 
