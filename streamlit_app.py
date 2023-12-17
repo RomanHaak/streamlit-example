@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 import requests
 from io import BytesIO
-pip install openpyxl
+
 
 # URL der Excel-Datei auf GitHub
 url = 'https://raw.githubusercontent.com/RomanHaak/streamlit-example/master/CBAM_Estimator_Default_Values.xlsx'
