@@ -11,7 +11,7 @@ url = 'https://github.com/RomanHaak/streamlit-example/blob/e1ac932997152b8c602b3
 # Anfordern der Datei von GitHub
 response = requests.get(url)
 
-st.title('CBAM-Kostenschätzerli')
+st.title('CBAM-Kostenschätzer')
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
