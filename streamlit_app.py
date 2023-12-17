@@ -20,9 +20,7 @@ data_frame = pd.read_excel(BytesIO(response.content), sheet_name='Alle_Default_V
 
 
 
-
-
-st.title('CBAM-Kostenschätzerl')
+st.title('CBAM-Kostenschätzer')
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
