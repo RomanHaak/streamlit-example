@@ -12,7 +12,10 @@ url = 'https://github.com/RomanHaak/streamlit-example/blob/e1ac932997152b8c602b3
 response = requests.get(url)
 response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
 
-st.title('CBAM-Kostenschätzerli')
+# Lesen der Excel-Datei aus dem Response
+excel_data = pd.read_excel(BytesIO(response.content))
+
+st.title('CBAM-Kostenschätzer')
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
