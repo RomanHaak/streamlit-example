@@ -21,7 +21,7 @@ matrix_data = data_frame.values.tolist()
 
 
 
-st.title('CBAM-Kostenschätzer')
+st.title('CBAM-Kostenschätzerli')
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
