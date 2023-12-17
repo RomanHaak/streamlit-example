@@ -16,7 +16,7 @@ response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
 
 # Verwendung von Pandas, um die Excel-Datei zu lesen
 # Passen Sie 'sheet_name' und Zellenbereich nach Bedarf an
-data_frame = pd.read_excel(BytesIO(response.content), sheet_name='Alle_Default_Values_Mit_Nullen', skiprows=5, usecols='A:DR', nrows=277)
+
 
 
 
