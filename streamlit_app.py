@@ -98,6 +98,48 @@ countries = [
 ]
 
 
+countries_EU = [
+    "AT - Österreich",
+    "BE - Belgien",
+    "BG - Bulgarien",
+    "CY - Zypern",
+    "CZ - Tschechien",
+    "DE - Deutschland",
+    "DK - Dänemark",
+    "EE - Estland",
+    "ES - Spanien",
+    "EU - Europäische Gemeinschaft",
+    "FI - Finnland",
+    "FR - Frankreich",
+    "GR - Griechenland",
+    "HR - Kroatien",
+    "HU - Ungarn",
+    "IE - Irland",
+    "IT - Italien",
+    "LT - Litauen",
+    "LU - Luxemburg",
+    "LV - Lettland",
+    "MT - Malta",
+    "NL - Niederlande",
+    "PL - Polen",
+    "PT - Portugal",
+    "RO - Rumänien",
+    "SE - Schweden",
+    "SI - Slowenien",
+    "SK - Slowakei"
+]
+
+
+countries_not_relevant = [
+    "CH - Schweiz",
+    "IS - Island",
+    "LI - Liechtenstein",
+    "NO - Norwegen",
+    "XC - Ceuta",
+    "XL - Melilla"
+]
+
+
 cn_codes = [
     "2601 12 00", "7201", "7202 11", "7202 19", "7202 41", "7202 49", "7202 60 00", "7203", "7205", "7206", 
     "7206 10 00", "7206 90 00", "7207", "7207 11 11", "7207 11 14", "7207 11 16", "7207 12 10", "7207 19 12", 
@@ -133,6 +175,7 @@ cn_codes = [
     "3102", "3102 10", "3102 21 00", "3102 29 00", "3102 30", "3102 40", "3102 50 00", "3102 60 00", 
     "3102 80 00", "3105", "3105 20", "3105 30 00", "3105 40 00", "3105 51 00", "3105 59 00"
 ]
+
 
 
 dropdown_cn_codes = st.selectbox(
