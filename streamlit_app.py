@@ -15,10 +15,7 @@ response = requests.get(url)
 response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
 
 
-# Lesen des spezifizierten Bereichs der Excel-Tabelle
-data_frame_part = pd.read_excel(url, sheet_name='Alle_Default_Values_Mit_Nullen', skiprows=5, usecols='A:DR', nrows=277)
-# Umwandlung des DataFrame in eine Matrix (Liste von Listen)
-default_values_1 = data_frame_part.values.tolist()
+
 
 
 
