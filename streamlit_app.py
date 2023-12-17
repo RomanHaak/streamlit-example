@@ -8,7 +8,7 @@ from io import BytesIO
 # URL der Excel-Datei auf GitHub
 url = 'https://github.com/RomanHaak/streamlit-example/blob/e1ac932997152b8c602b3aa54fd404a3b5f35520/CBAM_Estimator_Default_Values.xlsx'
 
-st.title('CBAM-Kostenschätzer')
+st.title('CBAM-Kostenschätzerli')
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
