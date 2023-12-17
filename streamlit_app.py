@@ -18,7 +18,7 @@ response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
 
 
 
-st.title('CBAM-Kostenschätzer')
+st.title('CBAM-Kostenschätzerli')
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
