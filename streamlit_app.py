@@ -5,6 +5,16 @@ import streamlit as st
 import requests
 from io import BytesIO
 
+# URL der Excel-Datei auf GitHub
+url = 'https://raw.githubusercontent.com/IhrBenutzername/IhrRepository/master/ihre_datei.xlsx'
+
+# Anfordern der Datei von GitHub
+response = requests.get(url)
+response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
+
+# Lesen der Excel-Datei aus dem Response
+excel_data = pd.read_excel(BytesIO(response.content))
+
 st.title('CBAM-Kostenschätzer')
 
 countries = [
