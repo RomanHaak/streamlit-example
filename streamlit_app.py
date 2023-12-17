@@ -14,9 +14,7 @@ url = 'https://raw.githubusercontent.com/RomanHaak/streamlit-example/master/CBAM
 response = requests.get(url)
 response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
 
-# Lesen der Excel-Datei aus dem Response
-# Lesen des spezifischen Bereichs A6 bis DR282 vom Blatt 'Alle_Default_Values_Mit_Nullen'
-data_frame = pd.read_excel(BytesIO(response.content), sheet_name='Alle_Default_Values_Mit_Nullen', skiprows=5, usecols='A:DR', nrows=277)
+
 
 
 
