@@ -14,8 +14,6 @@ url = 'https://raw.githubusercontent.com/RomanHaak/streamlit-example/master/CBAM
 response = requests.get(url)
 response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
 
-# Verwendung von Pandas, um die Excel-Datei zu lesen
-# Passen Sie 'sheet_name' und Zellenbereich nach Bedarf an
 
 
 
