@@ -17,10 +17,6 @@ response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
 
 
 
-
-
-
-
 st.title('CBAM-Kostenschätzer')
 
 countries = [
