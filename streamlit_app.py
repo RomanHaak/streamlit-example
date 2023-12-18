@@ -3011,7 +3011,6 @@ def calculate():
       st.success(f"{ans}€")
       
 
-    
    
     
 calculate()
