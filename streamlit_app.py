@@ -2993,8 +2993,12 @@ def calculate():
       ans = 0
       st.success(f"{ans}€, für Importe innerhalb der EU fallen keine CBAM-Kosten an.")
      elif dropdown_countries in countries_not_relevant:
-      ans = 0
-      st.success(f"{ans}€, für Importe aus {dropdown_countries} fallen keine CBAM-Kosten an.")
+      if dropdown_countries == 'CH - Schweiz':
+       ans = 0
+       st.success(f"{ans}€, für Importe aus der {dropdown_countries} fallen keine CBAM-Kosten an.")
+      else:
+       ans = 0
+       st.success(f"{ans}€, für Importe aus {dropdown_countries} fallen keine CBAM-Kosten an.")
      else:
       ans=activity_data*100
       st.success(f"{ans}")
