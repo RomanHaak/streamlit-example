@@ -3012,7 +3012,6 @@ def calculate():
       
 
 
-
         
    
     
