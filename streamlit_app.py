@@ -2971,7 +2971,7 @@ cn_codes = [
 
 
 
-st.title('CBAM-Kostenschätzer')
+st.title('CBAM-Kostenschätzerli')
 
 
 dropdown_cn_codes = st.selectbox(
