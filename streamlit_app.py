@@ -3008,7 +3008,8 @@ def calculate():
       ans=activity_data*100
       st.success(f"{ans}€")
       
-     
+
+
         
    
     
