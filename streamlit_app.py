@@ -2988,7 +2988,7 @@ activity_data = st.number_input('Geben Sie die Menge der importierten Ware (in T
 st.write('Geschätzte Kosten:')
 
 def calculate():
-    if isinstance(activity_data,int):
+    if isinstance(dropdown_cn_codes,str) and isinstance(dropdown_countries,str) and isinstance(activity_data,int):
      if dropdown_countries in countries_EU:
       ans = 0
       st.success(f"{ans}€, für Importe innerhalb der EU fallen keine CBAM-Kosten an.")
@@ -3002,8 +3002,8 @@ def calculate():
      elif dropdown_countries == 'BY - Belarus':
        ans_dir = activity_data*default_belarus[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_belarus[cn_codes.index(dropdown_cn_codes)][1]
-       ans = activity_data*100
-       st.success(f"{ans_dir}€")
+       ans = ans_dir + ans_indir
+       st.success(f"{ans}€")
      else:
       ans=activity_data*100
       st.success(f"{ans}€")
