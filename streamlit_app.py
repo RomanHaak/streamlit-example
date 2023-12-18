@@ -2971,7 +2971,7 @@ cn_codes = [
 
 
 
-st.title('CBAM-Kostenschätzerli')
+st.title('CBAM-Kostenschätzer')
 
 
 dropdown_cn_codes = st.selectbox(
@@ -3003,7 +3003,7 @@ def calculate():
        ans_dir = activity_data*default_belarus[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_belarus[cn_codes.index(dropdown_cn_codes)][1]
        ans = activity_data*100
-       st.success(f"{ans}€")
+       st.success(f"{ans_dir}€")
      else:
       ans=activity_data*100
       st.success(f"{ans}€")
