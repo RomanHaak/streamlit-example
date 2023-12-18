@@ -3004,7 +3004,6 @@ def calculate():
        ans_indir = activity_data*default_belarus[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success("Direkte Emissionen: {ans_dir} tCO2 / t")
        st.success(f"{ans}€")
      else:
       ans=activity_data*100
