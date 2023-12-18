@@ -3002,7 +3002,7 @@ def calculate():
      elif dropdown_countries == 'BY - Belarus':
        ans_dir = activity_data*default_belarus[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_belarus[cn_codes.index(dropdown_cn_codes)][1]
-       ans = (ans_dir+and_indir)*100
+       ans = (ans_dir+ans_indir)*100
        st.success(f"{ans}€")
      else:
       ans=activity_data*100
