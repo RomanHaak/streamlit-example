@@ -2796,7 +2796,7 @@ default_taiwan = [[0.16, 0.04],
 
 
 
-st.title('CBAM-Kostenschätzer')
+
 
 countries = [
     'AD - Andorra', 'AE - Vereinigte Arabische Emirate', 'AF - Afghanistan', 
@@ -2971,6 +2971,9 @@ cn_codes = [
 
 
 
+st.title('CBAM-Kostenschätzerli')
+
+
 dropdown_cn_codes = st.selectbox(
     'Geben Sie den KN-Code Ihrer Ware an',
     cn_codes, index=None, placeholder='KN-Code')
@@ -2986,9 +2989,21 @@ st.write('Geschätzte Kosten:')
 
 def calculate():
     if isinstance(activity_data,int):
-        ans=activity_data*100
-        st.success(f"{ans}")
+     if dropdown_countries in countries_EU:
+      ans = 0
+      st.success(f"{ans}€, für Importe innerhalb der EU fallen keine CBAM-Kosten an.")
+     elif dropdown_countries in countries_not_relevant:
+      ans = 0
+      st.success(f"{ans}€, für Importe aus {dropdown_countries} fallen keine CBAM-Kosten an.")
+     else:
+      ans=activity_data*100
+      st.success(f"{ans}")
+      
+     
+        
    
     
 calculate()
+ 
+
  
