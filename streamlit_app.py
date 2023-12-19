@@ -1,4 +1,3 @@
-
 import altair as alt
 import numpy as np
 import pandas as pd
@@ -10023,7 +10022,8 @@ default_trinidad_and_tobago = [[0.31, 0.05],
 
 
 
-default_turkmenistan = [[1.9, 0.17],
+default_turkmenistan = [[0.31,0.05],
+ [1.9, 0.17],
  [1.44, 2.08],
  [1.44, 2.08],
  [2.06, 3.38],
@@ -10300,7 +10300,8 @@ default_turkmenistan = [[1.9, 0.17],
 
 
 
-default_weighted_average = [[1.9, 0.17],
+default_weighted_average = [[0.31,0.05],
+ [1.9, 0.17],
  [1.44, 2.08],
  [1.44, 2.08],
  [2.06, 3.38],
@@ -10308,7 +10309,7 @@ default_weighted_average = [[1.9, 0.17],
  [3.45, 2.81],
  [4.81, 0.0],
  [1.9, 0.17],
- [2.24, 0.23],
+ [2.25, 0.23],
  [2.52, 0.23],
  [1.97, 0.23],
  [2.14, 0.42],
@@ -10350,7 +10351,7 @@ default_weighted_average = [[1.9, 0.17],
  [1.89, 0.32],
  [1.89, 0.32],
  [1.89, 0.32],
- [1.93, 0.5],
+ [1.93, 0.51],
  [1.88, 0.49],
  [1.95, 0.51],
  [1.95, 0.51],
@@ -10377,7 +10378,7 @@ default_weighted_average = [[1.9, 0.17],
  [2.21, 1.99],
  [2.21, 1.99],
  [2.21, 1.99],
- [2.19, 1.94],
+ [2.19, 1.95],
  [2.18, 1.9],
  [2.18, 1.9],
  [2.21, 1.99],
@@ -10714,7 +10715,7 @@ countries_not_relevant = [
 ]
 
 
-cn_codes = [
+cn_codes_without_text = [
     "2601 12 00", "7201", "7202 11", "7202 19", "7202 41", "7202 49", "7202 60 00", "7203", "7205", "7206", 
     "7206 10 00", "7206 90 00", "7207", "7207 11 11", "7207 11 14", "7207 11 16", "7207 12 10", "7207 19 12", 
     "7207 19 80", "7207 20 11", "7207 20 15", "7207 20 17", "7207 20 32", "7207 20 52", "7207 20 80", "7207 11 90", 
@@ -10752,6 +10753,284 @@ cn_codes = [
 
 
 
+cn_codes = ['2601 12 00 - Agglomerated iron ores and concentrates, other than roasted iron pyrites',
+ '7201 - Pig iron and spiegeleisen in pigs, blocks or other primary forms',
+ '7202 11 - Ferro-manganese',
+ '7202 19 - Ferro-manganese',
+ '7202 41 - Ferro-chromium',
+ '7202 49 - Ferro-chromium',
+ '7202 60 00 - Ferro-nickel',
+ '7203 - Ferrous products obtained by direct reduction of iron ore and other spongy ferrous products, in lumps, pellets or the like; iron having a minimum purity of 99.94%, in lumps, pellets or similar forms',
+ '7205 - Granules and powders, of pig iron, spiegeleisen, iron or steel',
+ '7206 - Iron and non-alloy steel in ingots or other primary forms (excluding iron of heading no. 7203)',
+ '7206 10 00 - Ingots',
+ '7206 90 00 - Continuous casting (slab, billet, bloom)',
+ '7207 - Iron or non-alloy steel; semi-finished products thereof',
+ '7207 11 11 - Bars, rods, and other long products',
+ '7207 11 14 - Bars, rods, and other long products',
+ '7207 11 16 - Bars, rods, and other long products',
+ '7207 12 10 - Bars, rods, and other long products',
+ '7207 19 12 - Bars, rods, and other long products',
+ '7207 19 80 - Bars, rods, and other long products',
+ '7207 20 11 - Bars, rods, and other long products',
+ '7207 20 15 - Bars, rods, and other long products',
+ '7207 20 17 - Bars, rods, and other long products',
+ '7207 20 32 - Bars, rods, and other long products',
+ '7207 20 52 - Bars, rods, and other long products',
+ '7207 20 80 - Bars, rods, and other long products',
+ '7207 11 90 - Forgings',
+ '7207 12 90 - Forgings',
+ '7207 19 19 - Forgings',
+ '7207 20 19 - Forgings',
+ '7207 20 39 - Forgings',
+ '7207 20 59 - Forgings',
+ '7208 - Iron or non-alloy steel; flat-rolled products of a width of 600mm or more, hot-rolled, not clad, plated or coated',
+ '7209 - Iron or non-alloy steel; flat-rolled products, width 600mm or more, cold-rolled (cold- reduced), not clad, plated or coated',
+ '7210 - Iron or non-alloy steel; flat-rolled products, width 600mm or more, clad, plated or coated',
+ '7211 - Iron or non-alloy steel; flat-rolled products, width less than 600mm, not clad, plated or coated',
+ '7211 13 00 - Hot-rolled flat products',
+ '7211 14 00 - Hot-rolled flat products',
+ '7211 19 00 - Hot-rolled flat products',
+ '7211 23 - Cold-rolled and annealed flat products',
+ '7211 29 00 - Cold-rolled and annealed flat products',
+ '7211 90 - Cold-rolled and annealed flat products',
+ '7212 - Iron or non-alloy steel; flat-rolled products, width less than 600mm, clad, plated or coated',
+ '7213 - Iron or non-alloy steel; bars and rods, hot- rolled, in irregularly wound coils',
+ '7214 - Iron or non-alloy steel; bars and rods, not further worked than forged, hot-rolled, hot drawn or hot-extruded, but including those twisted after rolling',
+ '7214 10 00 - Forgings',
+ '7214 20 00 - Bars, rods, and other long products',
+ '7214 30 00 - Bars, rods, and other long products',
+ '7214 91 - Bars, rods, and other long products',
+ '7214 99 - Bars, rods, and other long products',
+ '7215 - Iron or non-alloy steel; bars and rods, n.e.c. in chapter 72',
+ '7216 - Iron or non-alloy steel, angles, shapes and sections',
+ '7217 - Wire of iron or non-alloy steel.',
+ '7217 10 - Wires',
+ '7217 20 - Plated or coated wires',
+ '7217 30 - Plated or coated wires',
+ '7217 90 - Plated or coated wires',
+ '7218 - Stainless steel in ingots or other primary forms; semi-finished products of stainless steel.',
+ '7218 10 00 - Ingots and forgings',
+ '7218 99 19 - Ingots and forgings',
+ '7218 99 80 - Ingots and forgings',
+ '7218 91 - Hot-rolled flat products',
+ '7218 99 11 - Hot-rolled flat products',
+ '7218 99 20 - Hot-rolled flat products',
+ '7219 - Stainless steel; flat-rolled products of width of 600mm or more',
+ '7219 11 00 - Hot-rolled flat products',
+ '7219 12 - Hot-rolled flat products',
+ '7219 13 - Hot-rolled flat products',
+ '7219 14 - Hot-rolled flat products',
+ '7219 21 - Hot-rolled flat products',
+ '7219 22 - Hot-rolled flat products',
+ '7219 23 00 - Hot-rolled flat products',
+ '7219 24 00 - Hot-rolled flat products',
+ '7219 31 00 - Cold-rolled and annealed flat products',
+ '7219 32 - Cold-rolled and annealed flat products',
+ '7219 33 - Cold-rolled and annealed flat products',
+ '7219 34 - Cold-rolled and annealed flat products',
+ '7219 35 - Cold-rolled and annealed flat products',
+ '7219 90 - Cold-rolled and annealed flat products',
+ '7220 - Stainless steel; flat-rolled products of width less than 600mm',
+ '7220 11 00 - Hot-rolled flat products',
+ '7220 12 00 - Hot-rolled flat products',
+ '7220 20 - Cold-rolled and annealed flat products',
+ '7220 90 - Cold-rolled and annealed flat products',
+ '7221 - Stainless steel bars and rods, hot-rolled, in irregularly wound coils',
+ '7222 - Stainless steel bars and rods, angles, shapes and sections',
+ '7222 11 - Bars, rods, and other long products',
+ '7222 19 - Bars, rods, and other long products',
+ '7222 20 - Bars, rods, and other long products',
+ '7222 40 - Bars, rods, and other long products',
+ '7222 30 - Forgings',
+ '7223 - Stainless steel wire',
+ '7223 00 - Wires',
+ '7224 - Alloy steel in ingots or other primary forms, semi-finished products of other alloy steel',
+ '7224 10 - Ingots and forgings',
+ '7224 90 18 - Ingots and forgings',
+ '7224 90 90 - Ingots and forgings',
+ '7224 90 02 - Hot-rolled flat products',
+ '7224 90 03 - Hot-rolled flat products',
+ '7224 90 05 - Hot-rolled flat products',
+ '7224 90 07 - Hot-rolled flat products',
+ '7224 90 14 - Hot-rolled flat products',
+ '7224 90 31 - Hot-rolled flat products',
+ '7224 90 38 - Hot-rolled flat products',
+ '7225 - Alloy steel flat-rolled products, of a width 600mm or more',
+ '7225 11 00 - Hot-rolled flat products',
+ '7225 19 10 - Hot-rolled flat products',
+ '7225 30 - Hot-rolled flat products',
+ '7225 40 - Hot-rolled flat products',
+ '7225 19 90 - Cold-rolled and annealed flat products',
+ '7225 50 - Cold-rolled and annealed flat products',
+ '7225 91 00 - Plated or coated flat products',
+ '7225 92 00 - Plated or coated flat products',
+ '7225 99 00 - Plated or coated flat products',
+ '7226 - Alloy steel flat-rolled products, of a width of less than 600mm',
+ '7226 11 00 - Hot-rolled flat products',
+ '7226 19 10 - Hot-rolled flat products',
+ '7226 20 00 - Hot-rolled flat products',
+ '7226 91 - Hot-rolled flat products',
+ '7226 19 80 - Cold-rolled and annealed flat products',
+ '7226 92 00 - Cold-rolled and annealed flat products',
+ '7226 99 - Plated or coated flat products',
+ '7227 - Steel, alloy; bars and rods, hot-rolled, in irregularly wound coils',
+ '7228 - Alloy steel bars, rods, shapes and sections; hollow drill bars and rods, of alloy or non-alloy steel',
+ '7228 10 20 - Bars, rods, and other long products',
+ '7228 10 90 - Bars, rods, and other long products',
+ '7228 20 - Bars, rods, and other long products',
+ '7228 30 - Bars, rods, and other long products',
+ '7228 50 - Bars, rods, and other long products',
+ '7228 60 - Bars, rods, and other long products',
+ '7228 70 - Bars, rods, and other long products',
+ '7228 80 00 - Bars, rods, and other long products',
+ '7228 10 50 - Forgings',
+ '7228 40 - Forgings',
+ '7229 - Wire of other alloy steel.',
+ '7301 - Sheet piling of iron or steel, whether or not drilled, punched or made from assembled elements; welded angles, shapes and sections, of iron or steel.',
+ '7302 - Railway or tramway track construction material of iron or steel, the following : rails, check-rails and rack rails, switch blades, crossing frogs, point rods and other crossing pieces, sleepers (cross-ties), fish-plates, chairs, chair wedges, sole plates',
+ '7303 - Tubes, pipes & hollow profiles of cast iron',
+ '7303 00 - Tubes, pipes & hollow profiles of cast iron',
+ '7304 - Tubes, pipes and hollow profiles, seamless, of iron (other than cast iron) or steel',
+ '7304 11 00 - Beams, billets, rails and tubes -- alloying elements group 1',
+ '7304 22 00 - Beams, billets, rails and tubes -- alloying elements group 1',
+ '7304 24 00 - Beams, billets, rails and tubes -- alloying elements group 1',
+ '7304 41 00 - Beams, billets, rails and tubes -- alloying elements group 1',
+ '7304 49 - Beams, billets, rails and tubes -- alloying elements group 1',
+ '7304 51 - Beams, billets, rails and tubes -- alloying elements group 1',
+ '7304 59 - Beams, billets, rails and tubes -- alloying elements group 1',
+ '7304 19 - Beams, billets, rails and tubes -- alloying elements group 2',
+ '7304 23 00 - Beams, billets, rails and tubes -- alloying elements group 2',
+ '7304 29 - Beams, billets, rails and tubes -- alloying elements group 2',
+ '7304 31 - Beams, billets, rails and tubes -- alloying elements group 2',
+ '7304 39 - Beams, billets, rails and tubes -- alloying elements group 2',
+ '7304 90 00 - Beams, billets, rails and tubes -- alloying elements group 2',
+ '7305 - Other tubes and pipes (for example, welded, riveted or similarly closed), having circular cross-sections, the external diameter of which exceeds 406.4 mm, of iron or steel.',
+ '7306 - Other tubes, pipes and hollow profiles (for example, open seam or welded, riveted or similarly closed), of iron or steel.',
+ '7306 30 18 - Hot-rolled flat products',
+ '7306 19 00 - Cold-rolled and annealed flat products',
+ '7306 29 00 - Cold-rolled and annealed flat products',
+ '7306 30 12 - Cold-rolled and annealed flat products',
+ '7306 30 41 - Plated or coated flat products',
+ '7306 30 49 - Plated or coated flat products',
+ '7306 30 72 - Plated or coated flat products',
+ '7306 30 77 - Plated or coated flat products',
+ '7306 30 80 - Plated or coated flat products',
+ '7306 61 92 - Plated or coated flat products',
+ '7306 61 99 - Plated or coated flat products',
+ '7306 69 90 - Plated or coated flat products',
+ '7306 90 00 - Plated or coated flat products',
+ '7306 40 80 - Hot-rolled flat products -- alloyed',
+ '7306 50 29 - Hot-rolled flat products -- alloyed',
+ '7306 11 00 - Cold-rolled and annealed flat products -- alloying elements group 1',
+ '7306 21 00 - Cold-rolled and annealed flat products -- alloying elements group 1',
+ '7306 40 20 - Cold-rolled and annealed flat products -- alloying elements group 1',
+ '7306 61 10 - Cold-rolled and annealed flat products -- alloying elements group 1',
+ '7306 69 10 - Cold-rolled and annealed flat products -- alloying elements group 1',
+ '7306 50 21 - Cold-rolled and annealed flat products -- alloying elements group 2',
+ '7306 50 80 - Cold-rolled and annealed flat products -- alloying elements group 2',
+ '7307 - Tube or pipe fittings (for example, couplings, elbows, sleeves), of iron or steel.',
+ '7307 11 - Forgings of cast iron',
+ '7307 19 10 - Forgings of cast iron',
+ '7307 19 90 - Forgings of cast steel',
+ '7307 21 00 - Beams, billets, rails and tubes -- of stainless steel',
+ '7307 22 - Beams, billets, rails and tubes -- of stainless steel',
+ '7307 23 - Beams, billets, rails and tubes -- of stainless steel',
+ '7307 29 - Beams, billets, rails and tubes -- of stainless steel',
+ '7307 91 00 - Beams, billets, rails and tubes',
+ '7307 92 - Beams, billets, rails and tubes',
+ '7307 93 - Beams, billets, rails and tubes',
+ '7307 99 - Beams, billets, rails and tubes',
+ '7308 - Structures (excluding prefabricated buildings of heading 9406) and parts of structures (for example, bridges and bridge-sections, lock- gates, towers, lattice masts, roofs, roofing frameworks, doors and windows and their frames and thresholds for doors, shutters, balusTrades, pillars and columns), of iron or steel; plates, rods, angles, shapes, sections, tubes and the like, prepared for use in structures, of iron or steel',
+ '7309 - Reservoirs, tanks, vats and similar containers for any material (other than compressed or liquefied gas), of iron or steel, of a capacity exceeding 300 l, whether or not lined or heat- insulated, but not fitted with mechanical or thermal equipment',
+ '7310 - Tanks, casks, drums, cans, boxes and similar containers, for any material (other than compressed or liquefied gas), of iron or steel, of a capacity not exceeding 300 l, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment',
+ '7311 - Containers for compressed or liquefied gas, of iron or steel',
+ '7311 00 - Containers for compressed or liquefied gas, of iron or steel',
+ '7318 - Screws, bolts, nuts, coach screws, screw hooks, rivets, cotters, cotter pins, washers (including spring washers) and similar articles, of iron or steel',
+ '7318 11 00 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 12 90 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 13 00 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 14 91 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 14 99 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 19 00 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 21 00 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 24 00 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 29 00 - Coach screws; other wood screws; screw hooks and screw rings; self-tapping screws; other threaded articles; spring washers and other lock washers; cotters and cotter pins; other non-threaded articles - of iron or steel',
+ '7318 12 10 - Other wood screws; self-tapping screws - of stainless steel',
+ '7318 14 10 - Other wood screws; self-tapping screws - of stainless steel',
+ '7318 15 - Other screws and bolts, whether or not with their nuts or washers',
+ '7318 16 - Nuts',
+ '7318 22 00 - Other washers',
+ '7318 23 00 - Rivets',
+ '7326 - Other articles of iron or steel',
+ '7326 11 00 - Forged, stamped, or sintered',
+ '7326 19 - Forged, stamped, or sintered',
+ '7326 90 92 - Forged, stamped, or sintered',
+ '7326 90 94 - Forged, stamped, or sintered',
+ '7326 90 96 - Forged, stamped, or sintered',
+ '7326 20 00 - Articles of iron or steel wire',
+ '7326 90 30 - Ladders and steps; Pallets and similar platforms for handling goods; Reels for cables, piping and the like; Non-mechanical ventilators, guttering, hooks and like articles used in the building industry',
+ '7326 90 40 - Ladders and steps; Pallets and similar platforms for handling goods; Reels for cables, piping and the like; Non-mechanical ventilators, guttering, hooks and like articles used in the building industry',
+ '7326 90 50 - Ladders and steps; Pallets and similar platforms for handling goods; Reels for cables, piping and the like; Non-mechanical ventilators, guttering, hooks and like articles used in the building industry',
+ '7326 90 60 - Ladders and steps; Pallets and similar platforms for handling goods; Reels for cables, piping and the like; Non-mechanical ventilators, guttering, hooks and like articles used in the building industry',
+ '7326 90 98 - Other articles of iron or steel',
+ '7601 - Unwrought aluminium',
+ '7603 - Aluminium powders and flakes',
+ '7604 10 10 - Bars and rods',
+ '7604 10 90 - Profiles',
+ '7604 21 00 - Hollow profiles',
+ '7604 29 10 - Bars and rods',
+ '7604 29 90 - Profiles',
+ '7605 - Aluminium wire',
+ '7606 - Aluminium plates, sheets and strip, of a thickness exceeding 0,2 mm',
+ '7607 - Aluminium foil (whether or not printed or backed with paper, paperboard, plastics or similar backing materials) of a thickness (excluding any backing) not exceeding 0,2 mm',
+ '7608 - Aluminium tubes and pipes',
+ '7609 00 00 - Aluminium tube or pipe fittings (for example, couplings, elbows, sleeves)',
+ '7610 10 00 - Doors, windows and their frames and thresholds for doors',
+ '7610 90 - Other',
+ '7610 90 10 - Bridges and bridge-sections, towers and lattice masts',
+ '7610 90 90 - Other',
+ '7611 00 00 - Aluminium reservoirs, tanks, vats and similar containers, for any material (other than compressed or liquefied gas), of a capacity exceeding 300 litres, whether or not lined or heat- insulated, but not fitted with mechanical or thermal equipment',
+ '7612 - Aluminium casks, drums, cans, boxes and similar containers (including rigid or collapsible tubular containers), for any material (other than compressed or liquefied gas), of a capacity not exceeding 300 litres, whether or not lined or heat-insulated, but not fitted with mechanical or thermal equipment',
+ '7613 00 00 - Aluminium containers for compressed or liquefied gas',
+ '7614 - Stranded wire, cables, plaited bands and the like, of aluminium, not electrically insulated',
+ '7615 10 10 - Cast',
+ '7615 10 30 - Manufactured from foil of a thickness not exceeding 0,2 mm',
+ '7615 10 80 - Other',
+ '7615 20 00 - Sanitary ware and parts thereof',
+ '7616 10 00 - Nails, tacks, staples (other than those of heading 8305), screws, bolts, nuts, screw hooks, rivets, cotters, cotter pins, washers and similar articles',
+ '7616 91 00 - Cloth, grill, netting and fencing, of aluminium wire',
+ '7616 99 10 - Cast',
+ '7616 99 90 - Other',
+ '2507 00 80 - Calcined clay',
+ '2523 10 - White clinker',
+ '2523 10 - Grey clinker',
+ '2523 21 - CEM I white',
+ '2523 29 - CEM I grey',
+ '2523 90 - Other white cements',
+ '2523 90 - Other grey cements',
+ '2523 30 - Aluminous cement',
+ '2808 00 00 - Nitric acid; sulphonitric acids',
+ '2814 - Ammonia, anhydrous or in aqueous solution',
+ '2834 21 00 - Nitrates of potassium',
+ '3102 - Mineral or chemical fertilizers, nitrogenous',
+ '3102 10 - Urea, whether or not in aqueous solution',
+ '3102 21 00 - Ammonium sulphate',
+ '3102 29 00 - Double salts and mixtures of ammonium sulphate and ammonium nitrate',
+ '3102 30 - Ammonium nitrate, whether or not in aqueous solution',
+ '3102 40 - Mixtures of ammonium nitrate with calcium carbonate or other inorganic non-fertilising substances',
+ '3102 50 00 - Sodium nitrate',
+ '3102 60 00 - Double salts and mixtures of calcium nitrate and ammonium nitrate',
+ '3102 80 00 - Mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution',
+ '3105 - Mineral or chemical fertilisers containing two or three of the fertilising elements nitrogen, phosphorus and potassium',
+ '3105 20 - Mineral or chemical fertilisers containing the three fertilising elements nitrogen, phosphorus and potassium',
+ '3105 30 00 - Diammonium hydrogenorthophosphate (diammonium phosphate)',
+ '3105 40 00 - Ammonium dihydrogenorthophosphate (monoammonium phosphate) and mixtures thereof with diammonium hydrogenorthophosphate (diammonium phosphate)',
+ '3105 51 00 - Other mineral or chemical fertilisers containing the two fertilising elements nitrogen and phosphorus (nitrates and phosphates)',
+ '3105 59 00 - Other mineral or chemical fertilisers containing the two fertilising elements nitrogen and phosphorus (excl. nitrates and phosphates)']
+
+
+
 st.title('CBAM-Kostenschätzer')
 
 
@@ -10786,229 +11065,229 @@ def calculate():
        ans_indir = activity_data*default_belarus[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'BR - Brasilien':
        ans_dir = activity_data*default_brazil[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_brazil[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'CN - China':
        ans_dir = activity_data*default_china[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_china[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'IN - Indien':
        ans_dir = activity_data*default_india[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_india[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'JP - Japan':
        ans_dir = activity_data*default_japan[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_japan[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'KR - Südkorea':
        ans_dir = activity_data*default_south_korea[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_south_korea[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'RU - Russische Föderation':
        ans_dir = activity_data*default_russia[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_russia[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'RS - Serbien':
        ans_dir = activity_data*default_serbia[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_serbia[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'ZA - Südafrika':
        ans_dir = activity_data*default_south_africa[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_south_africa[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'TW - Taiwan':
        ans_dir = activity_data*default_taiwan[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_taiwan[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'TR - Türkei':
        ans_dir = activity_data*default_türkiye[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_türkiye[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'UA - Ukraine':
        ans_dir = activity_data*default_ukraine[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_ukraine[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'GB - Vereinigtes Königreich':
        ans_dir = activity_data*default_united_kingdom[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_united_kingdom[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'US - Vereinigte Staaten':
        ans_dir = activity_data*default_united_states[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_united_states[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'BH - Bahrain':
        ans_dir = activity_data*default_bahrain[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_bahrain[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'CA - Kanada':
        ans_dir = activity_data*default_canada[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_canada[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'EG - Ägypten':
        ans_dir = activity_data*default_egypt[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_egypt[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'KZ - Kasachstan':
        ans_dir = activity_data*default_kazakhstan[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_kazakhstan[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'MZ - Mosambik':
        ans_dir = activity_data*default_mozambique[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_mozambique[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'AE - Vereinigte Arabische Emirate':
        ans_dir = activity_data*default_united_arab_emirates[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_united_arab_emirates[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'AL - Albanien':
        ans_dir = activity_data*default_albania[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_albania[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'DZ - Algerien':
        ans_dir = activity_data*default_algeria[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_algeria[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'BA - Bosnien und Herzegowina':
        ans_dir = activity_data*default_bosnia_and_herzegovina[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_bosnia_and_herzegovina[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'CO - Kolumbien':
        ans_dir = activity_data*default_colombia[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_colombia[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'MY - Malaysia':
        ans_dir = activity_data*default_malaysia[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_malaysia[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'MA - Marokko':
        ans_dir = activity_data*default_morocco[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_morocco[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'PK - Pakistan':
        ans_dir = activity_data*default_pakistan[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_pakistan[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'SA - Saudi-Arabien':
        ans_dir = activity_data*default_saudi_arabia[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_saudi_arabia[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'TN - Tunesien':
        ans_dir = activity_data*default_tunisia[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_tunisia[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'VN - Vietnam':
        ans_dir = activity_data*default_vietnam[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_vietnam[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'CL - Chile':
        ans_dir = activity_data*default_chile[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_chile[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'GE - Georgien':
        ans_dir = activity_data*default_georgia[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_georgia[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'ID - Indonesien':
        ans_dir = activity_data*default_indonesia[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_indonesia[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'IL - Israel':
        ans_dir = activity_data*default_israel[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_israel[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'JO - Jordanien':
        ans_dir = activity_data*default_jordan[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_jordan[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'TT - Trinidad und Tobago':
        ans_dir = activity_data*default_trinidad_and_tobago[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_trinidad_and_tobago[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'TM - Turkmenistan':
        ans_dir = activity_data*default_turkmenistan[cn_codes.index(dropdown_cn_codes)][0]
        ans_indir = activity_data*default_turkmenistan[cn_codes.index(dropdown_cn_codes)][1]
        ans_tot = ans_dir + ans_indir
        ans = ans_tot*100
-       st.success(f"{ans}€")
+       st.success(f"{round(ans)}€")
      else:
       ans_dir = activity_data*default_weighted_average[cn_codes.index(dropdown_cn_codes)][0]
       ans_indir = activity_data*default_weighted_average[cn_codes.index(dropdown_cn_codes)][1]
       ans_tot = ans_dir + ans_indir
       ans = ans_tot*100
-      st.success(f"{ans}€")
+      st.success(f"{round(ans)}€")
       
 
     
