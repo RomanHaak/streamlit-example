@@ -10745,10 +10745,11 @@ cn_codes_without_text = [
     "7604 10 90", "7604 21 00", "7604 29 10", "7604 29 90", "7605", "7606", "7607", "7608", "7609 00 00", 
     "7610 10 00", "7610 90", "7610 90 10", "7610 90 90", "7611 00 00", "7612", "7613 00 00", "7614", 
     "7615 10 10", "7615 10 30", "7615 10 80", "7615 20 00", "7616 10 00", "7616 91 00", "7616 99 10", 
-    "7616 99 90", "2507 00 80", "2523 10 - weißer Klinker", "2523 10 - grauer Klinker", "2523 21", "2523 29", 
-    "2523 90 - weißer Zement", "2523 90 - grauer Zement", "2523 30", "2808 00 00", "2814", "2834 21 00", 
+    "7616 99 90", "2507 00 80", "2523 10 - weißer Klinker", "2523 10 - grauer Klinker", "2523 21 00", "2523 29 00", 
+    "2523 90 - weißer Zement", "2523 90 - grauer Zement", "2523 30 00", "2808 00 00", "2814", "2834 21 00", 
     "3102", "3102 10", "3102 21 00", "3102 29 00", "3102 30", "3102 40", "3102 50 00", "3102 60 00", 
-    "3102 80 00", "3105", "3105 20", "3105 30 00", "3105 40 00", "3105 51 00", "3105 59 00", "2804 10 00"
+    "3102 80 00", "3105", "3105 20", "3105 30 00", "3105 40 00", "3105 51 00", "3105 59 00", 
+    "2804 10 00", "3102 90 00", "3105 10 00"
 ]
 
 
@@ -11005,11 +11006,11 @@ cn_codes = ['2601 12 00 - Agglomerated iron ores and concentrates, other than ro
  '2507 00 80 - Calcined clay',
  '2523 10 - White clinker',
  '2523 10 - Grey clinker',
- '2523 21 - CEM I white',
- '2523 29 - CEM I grey',
+ '2523 21 00 - White Portland cement, whether or not artificially coloured',
+ '2523 29 00 - Other Portland cement',
  '2523 90 - Other white cements',
  '2523 90 - Other grey cements',
- '2523 30 - Aluminous cement',
+ '2523 30 00 - Aluminous cement',
  '2808 00 00 - Nitric acid; sulphonitric acids',
  '2814 - Ammonia, anhydrous or in aqueous solution',
  '2834 21 00 - Nitrates of potassium',
@@ -11028,7 +11029,9 @@ cn_codes = ['2601 12 00 - Agglomerated iron ores and concentrates, other than ro
  '3105 40 00 - Ammonium dihydrogenorthophosphate (monoammonium phosphate) and mixtures thereof with diammonium hydrogenorthophosphate (diammonium phosphate)',
  '3105 51 00 - Other mineral or chemical fertilisers containing the two fertilising elements nitrogen and phosphorus (nitrates and phosphates)',
  '3105 59 00 - Other mineral or chemical fertilisers containing the two fertilising elements nitrogen and phosphorus (excl. nitrates and phosphates)',
- '2804 10 00 - Hydrogen']
+ '2804 10 00 - Hydrogen',
+ '3102 90 00 - Other including mixtures not specified in the foregoing subheadings',
+ '3105 10 00 - Goods of this chapter in tablets or similar forms or in packages of a gross weight not exceeding 10 kg']
 
 
 
@@ -11063,6 +11066,14 @@ def calculate():
        st.success(f"{ans}€, für Importe aus {dropdown_countries} fallen keine CBAM-Kosten an.")
      elif dropdown_cn_codes == '2804 10 00 - Hydrogen':
       ant_tot = activity_data*10.4
+      ans = ant_tot*100
+      st.success(f"{round(ans)}€")
+     elif dropdown_cn_codes == '3102 90 00 - Other including mixtures not specified in the foregoing subheadings':
+      ant_tot = activity_data*1.75
+      ans = ant_tot*100
+      st.success(f"{round(ans)}€")
+     elif dropdown_cn_codes == '3105 10 00 - Goods of this chapter in tablets or similar forms or in packages of a gross weight not exceeding 10 kg':
+      ant_tot = activity_data*1.02
       ans = ant_tot*100
       st.success(f"{round(ans)}€")
      elif dropdown_countries == 'BY - Belarus':
