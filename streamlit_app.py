@@ -14,6 +14,7 @@ url = 'https://raw.githubusercontent.com/RomanHaak/streamlit-example/master/CBAM
 response = requests.get(url)
 response.raise_for_status()  # Stellt sicher, dass der Request erfolgreich war
 
+
 default_belarus = [[0.19, 0.02],
  [1.38, 0.08],
  [1.44, 1.21],
