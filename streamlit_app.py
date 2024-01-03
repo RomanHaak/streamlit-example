@@ -11304,8 +11304,8 @@ def calculate():
       ans_tot = ans_dir + ans_indir
       ans = ans_tot*100
       st.success(f"{round(ans)}€")
-     else:
-       st.warning(f"Geben Sie den CN-Code, das Herkunftsland und die Menge Ihrer importierten Ware (in Tonnen) an.")
+    else:
+     st.warning(f"Geben Sie den CN-Code, das Herkunftsland und die Menge Ihrer importierten Ware (in Tonnen) an.")
       
 
     
