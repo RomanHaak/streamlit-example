@@ -5,7 +5,6 @@ import streamlit as st
 import requests
 from io import BytesIO
 
-st.title('test2')
 
 
 # URL der Excel-Datei auf GitHub
@@ -11038,7 +11037,7 @@ cn_codes = ['2601 12 00 - Agglomerated iron ores and concentrates, other than ro
 
 
 
-st.title('CBAM-Kostenschätzerl')
+st.title('CBAM-Kostenschätzer')
 
 
 
